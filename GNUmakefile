@@ -656,6 +656,10 @@ endif
 	-cd unicorn_mode && unset CFLAGS && sh ./build_unicorn_support.sh
 endif
 
+.PHONY: qemu-only
+qemu-only: test_shm ready $(PROGS)
+	-cd qemu_mode && sh ./build_qemu_support.sh
+
 .PHONY: source-only
 source-only: all
 	-$(MAKE) -j4 -f GNUmakefile.llvm

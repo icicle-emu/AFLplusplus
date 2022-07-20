@@ -5,6 +5,9 @@ all:
 source-only:
 	@gmake source-only
 
+qemu-only:
+	@gmake qemu-only
+
 binary-only:
 	@gmake binary-only
 
